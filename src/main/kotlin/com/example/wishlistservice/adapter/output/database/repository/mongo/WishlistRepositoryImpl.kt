@@ -1,8 +1,8 @@
 package com.example.wishlistservice.adapter.output.database.repository.mongo
 
 import com.example.wishlistservice.adapter.output.database.mapper.WishlistMapper
-import com.example.wishlistservice.core.domain.Wishlist
-import com.example.wishlistservice.core.usecase.repository.WishlistRepository
+import com.example.wishlistservice.entities.Wishlist
+import com.example.wishlistservice.usecase.repository.WishlistRepository
 import org.springframework.stereotype.Service
 
 @Service

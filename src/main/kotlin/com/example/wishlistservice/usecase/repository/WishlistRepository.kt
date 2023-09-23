@@ -1,6 +1,6 @@
-package com.example.wishlistservice.core.usecase.repository
+package com.example.wishlistservice.usecase.repository
 
-import com.example.wishlistservice.core.domain.Wishlist
+import com.example.wishlistservice.entities.Wishlist
 
 interface WishlistRepository {
 

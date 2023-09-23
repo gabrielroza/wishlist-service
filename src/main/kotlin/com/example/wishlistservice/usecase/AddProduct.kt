@@ -1,7 +1,7 @@
-package com.example.wishlistservice.core.usecase
+package com.example.wishlistservice.usecase
 
-import com.example.wishlistservice.core.domain.Wishlist
-import com.example.wishlistservice.core.usecase.repository.WishlistRepository
+import com.example.wishlistservice.entities.Wishlist
+import com.example.wishlistservice.usecase.repository.WishlistRepository
 import org.springframework.stereotype.Service
 
 @Service

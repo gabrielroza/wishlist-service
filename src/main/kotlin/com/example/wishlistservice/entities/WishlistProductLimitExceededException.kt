@@ -1,3 +1,3 @@
-package com.example.wishlistservice.core.domain
+package com.example.wishlistservice.entities
 
 class WishlistProductLimitExceededException(message: String): RuntimeException(message)

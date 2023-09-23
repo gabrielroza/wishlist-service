@@ -1,4 +1,4 @@
-package com.example.wishlistservice.core.domain
+package com.example.wishlistservice.entities
 
 data class Wishlist(
     val customerId: String,

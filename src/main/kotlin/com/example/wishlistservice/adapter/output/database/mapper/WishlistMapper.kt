@@ -1,7 +1,7 @@
 package com.example.wishlistservice.adapter.output.database.mapper
 
 import com.example.wishlistservice.adapter.output.database.entity.WishlistDocument
-import com.example.wishlistservice.core.domain.Wishlist
+import com.example.wishlistservice.entities.Wishlist
 import org.springframework.stereotype.Service
 
 @Service
