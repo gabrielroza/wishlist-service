@@ -10,7 +10,7 @@ class AddProduct(
     fun addProductToCustomerWishlist(customerId: String, productId: String): Wishlist {
         return wishlistRepository.save(
             when (val wishlist = wishlistRepository.findByCustomerId(customerId)) {
-                null -> Wishlist(customerId, productIds = listOf(productId))
+                null -> Wishlist(customerId, productIds = setOf(productId))
                 else -> wishlist.copy(productIds = wishlist.productIds + productId)
             }
         )

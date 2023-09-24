@@ -2,7 +2,7 @@ package com.example.wishlistservice.domain
 
 data class Wishlist(
     val customerId: String,
-    val productIds: List<String>
+    val productIds: Set<String>
 ) {
 
     private companion object {

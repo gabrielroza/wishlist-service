@@ -7,5 +7,5 @@ import org.springframework.data.mongodb.core.mapping.Document
 data class WishlistDocument(
     @Id
     val customerId: String,
-    val productIds: List<String>
+    val productIds: Set<String>
 )
