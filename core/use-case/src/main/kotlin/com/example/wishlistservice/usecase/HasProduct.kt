@@ -10,7 +10,7 @@ class HasProduct(
         return wishlistRepository
             .findByCustomerId(customerId)
             ?.productIds
-            ?.contains(productId) != null
+            ?.contains(productId) ?: false
     }
 
 }

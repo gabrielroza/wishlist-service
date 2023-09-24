@@ -22,7 +22,7 @@ class HasProductTest() {
     }
 
     @Test
-    fun `Should return true when there is no wishlist for customer`() {
+    fun `Should return true when product is on wishlist`() {
         val product = "Product"
         val wishlist = Wishlist("Customer", setOf(product))
         every { wishlistRepository.findByCustomerId(any()) } returns wishlist
@@ -31,5 +31,17 @@ class HasProductTest() {
                 .customerHasProductOnWishlist(wishlist.customerId, product)
         )
     }
+
+    @Test
+    fun `Should return true when product is not on wishlist`() {
+        val product = "Product"
+        val wishlist = Wishlist("Customer", setOf(product))
+        every { wishlistRepository.findByCustomerId(any()) } returns wishlist
+        assertFalse(
+            HasProduct(wishlistRepository)
+                .customerHasProductOnWishlist(wishlist.customerId, "Product 2")
+        )
+    }
+
 
 }
