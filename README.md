@@ -5,7 +5,7 @@ Aplicação implementada em Kotlin e Spring Boot, organizada pelos seguintes mó
 - [core/domain](core/domain)
   - Classes do domínio, independente de bibliotecas externas.
 - [core/use-case](core/use-case)
- - Implementa manipulações do domínio e independe de bibliotecas externas.
+  - Implementa manipulações do domínio e independe de bibliotecas externas.
 - [adapter/input/spring-controller](adapter/input/spring-controller)
   - Implementa o mapeamento de APIs do serviço através do Spring Web, utiliza os casos de usos e o domínio.
 - [adapter/output/mongo-repository](adapter/output/mongo-repository)
@@ -20,8 +20,8 @@ Aplicação implementada em Kotlin e Spring Boot, organizada pelos seguintes mó
 - Baixar este repositório
 - Executar `docker-compose up` para subir o MongoDB utilizado pela aplicação
 - Executar ./gradlew :spring-app:bootRun
-- Swagger disponível em http://localhost:8080/swagger-ui/index.html
-  - ![screenshot](/imgs/swagger.png)
+- Swagger disponível em http://localhost:8080/swagger-ui/index.html  
+![screenshot](/imgs/swagger.png)
 
 
 ## Referências
