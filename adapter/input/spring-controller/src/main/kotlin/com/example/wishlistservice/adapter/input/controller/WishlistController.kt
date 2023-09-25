@@ -37,7 +37,7 @@ class WishlistController(
 
     @DeleteMapping("/customer/{customerId}/product/{productId}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    fun deleteProduct(@PathVariable customerId: String, @PathVariable productId: String): ResponseEntity<*> {
+    fun removeProduct(@PathVariable customerId: String, @PathVariable productId: String): ResponseEntity<*> {
        return try {
            removeProduct.removeProductFromCustomerWishlist(customerId = customerId, productId = productId)
            ResponseEntity.noContent().build<Void>()
