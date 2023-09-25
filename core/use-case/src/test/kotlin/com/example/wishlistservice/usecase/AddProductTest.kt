@@ -22,7 +22,8 @@ class AddProductTest {
         val expectedWishlist = Wishlist(customer, setOf(product))
         assertThat(
             AddProduct(wishlistRepository).addProductToCustomerWishlist(
-                customer, product
+                customer,
+                product
             )
         ).isEqualTo(expectedWishlist)
         verify { wishlistRepository.save(expectedWishlist) }
@@ -38,10 +39,10 @@ class AddProductTest {
         val expectedWishlist = existingWishlist.copy(productIds = existingWishlist.productIds + newProduct)
         assertThat(
             AddProduct(wishlistRepository).addProductToCustomerWishlist(
-                customer, newProduct
+                customer,
+                newProduct
             )
         ).isEqualTo(expectedWishlist)
         verify { wishlistRepository.save(expectedWishlist) }
     }
-
 }

@@ -5,20 +5,19 @@ import com.example.wishlistservice.domain.Wishlist
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
-class WishlistMapperTest {
+class WishlistDocumentMapperTest {
 
     @Test
     fun `Should map to domain`() {
         val wishlist = Wishlist("Customer", setOf("Product"))
         val document = WishlistDocument(wishlist.customerId, wishlist.productIds)
-        assertThat(WishlistMapper().toDomain(document)).isEqualTo(wishlist)
+        assertThat(WishlistDocumentMapper().toDomain(document)).isEqualTo(wishlist)
     }
 
     @Test
     fun `Should map to document`() {
         val wishlist = Wishlist("Customer", setOf("Product"))
         val document = WishlistDocument(wishlist.customerId, wishlist.productIds)
-        assertThat(WishlistMapper().toEntity(wishlist)).isEqualTo(document)
+        assertThat(WishlistDocumentMapper().toEntity(wishlist)).isEqualTo(document)
     }
-
 }

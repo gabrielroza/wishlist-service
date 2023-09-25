@@ -30,6 +30,4 @@ class UseCaseBindings {
     fun hasProduct(wishlistRepository: WishlistRepository) = HasProduct(
         wishlistRepository
     )
-
-
 }

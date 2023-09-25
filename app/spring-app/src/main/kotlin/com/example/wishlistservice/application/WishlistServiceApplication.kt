@@ -9,5 +9,5 @@ import org.springframework.context.annotation.ComponentScan
 class WishlistServiceApplication
 
 fun main(args: Array<String>) {
-	runApplication<WishlistServiceApplication>(*args)
+    runApplication<WishlistServiceApplication>(*args)
 }

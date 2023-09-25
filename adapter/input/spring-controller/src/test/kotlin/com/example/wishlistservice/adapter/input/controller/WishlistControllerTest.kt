@@ -90,5 +90,4 @@ class WishlistControllerTest {
             ProductWishlistedDTO(true)
         )
     }
-
 }

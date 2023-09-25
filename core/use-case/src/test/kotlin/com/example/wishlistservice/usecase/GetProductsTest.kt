@@ -27,5 +27,4 @@ class GetProductsTest {
             GetProducts(wishlistRepository).getProducts(customerId)
         ).isEqualTo(wishlist.productIds)
     }
-
 }

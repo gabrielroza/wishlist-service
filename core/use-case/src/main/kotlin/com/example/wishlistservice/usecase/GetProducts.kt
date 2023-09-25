@@ -7,9 +7,8 @@ class GetProducts(
 ) {
 
     fun getProducts(customerId: String): Set<String> {
-      return wishlistRepository
+        return wishlistRepository
             .findByCustomerId(customerId)
             ?.productIds ?: emptySet()
     }
-
 }

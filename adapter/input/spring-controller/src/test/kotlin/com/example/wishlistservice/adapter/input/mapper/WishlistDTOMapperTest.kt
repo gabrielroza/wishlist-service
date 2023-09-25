@@ -33,5 +33,4 @@ class WishlistDTOMapperTest {
                 .toErrorDto(WishlistProductLimitExceededException(message))
         ).isEqualTo(ErrorDTO(message))
     }
-
 }

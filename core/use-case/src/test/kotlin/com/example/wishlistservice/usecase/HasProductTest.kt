@@ -42,6 +42,4 @@ class HasProductTest() {
                 .customerHasProductOnWishlist(wishlist.customerId, "Product 2")
         )
     }
-
-
 }

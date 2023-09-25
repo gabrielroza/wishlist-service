@@ -16,5 +16,4 @@ class RemoveProduct(
             else -> wishlistRepository.save(wishlist.copy(productIds = wishlist.productIds - productId))
         }
     }
-
 }

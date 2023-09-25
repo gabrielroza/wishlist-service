@@ -34,7 +34,6 @@ tasks.test {
     useJUnitPlatform()
 }
 
-
 val jar: Jar by tasks
 val bootJar: BootJar by tasks
 

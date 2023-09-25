@@ -1,6 +1,6 @@
 package com.example.wishlistservice.adapter.output.mongorepository
 
-import com.example.wishlistservice.adapter.output.mongorepository.mapper.WishlistMapper
+import com.example.wishlistservice.adapter.output.mongorepository.mapper.WishlistDocumentMapper
 import com.example.wishlistservice.adapter.output.mongorepository.mongo.WishlistMongoRepository
 import com.example.wishlistservice.domain.Wishlist
 import com.example.wishlistservice.usecase.repository.WishlistRepository
@@ -11,15 +11,15 @@ import org.springframework.stereotype.Service
 @EnableMongoRepositories
 class WishlistRepositoryImpl(
     private val wishlistMongoRepository: WishlistMongoRepository,
-    private val wishlistMapper: WishlistMapper
+    private val wishlistDocumentMapper: WishlistDocumentMapper
 ) : WishlistRepository {
 
-    override fun save(wishlist: Wishlist): Wishlist = wishlistMapper
+    override fun save(wishlist: Wishlist): Wishlist = wishlistDocumentMapper
         .toEntity(wishlist)
         .let(wishlistMongoRepository::save)
-        .let(wishlistMapper::toDomain)
+        .let(wishlistDocumentMapper::toDomain)
 
     override fun findByCustomerId(customerId: String): Wishlist? = wishlistMongoRepository
         .findByCustomerId(customerId)
-        ?.let(wishlistMapper::toDomain)
+        ?.let(wishlistDocumentMapper::toDomain)
 }

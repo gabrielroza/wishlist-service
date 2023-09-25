@@ -1,6 +1,5 @@
 rootProject.name = "modular-wishlist-service"
 
-
 include("domain", "spring-app", "use-case", "spring-controller", "mongo-repository")
 project(":domain").projectDir = File("./core/domain")
 project(":use-case").projectDir = File("./core/use-case")

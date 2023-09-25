@@ -5,7 +5,7 @@ import com.example.wishlistservice.domain.Wishlist
 import org.springframework.stereotype.Service
 
 @Service
-class WishlistMapper {
+class WishlistDocumentMapper {
 
     fun toEntity(wishlist: Wishlist) = WishlistDocument(
         customerId = wishlist.customerId,
@@ -16,5 +16,4 @@ class WishlistMapper {
         customerId = wishlist.customerId,
         productIds = wishlist.productIds
     )
-
 }

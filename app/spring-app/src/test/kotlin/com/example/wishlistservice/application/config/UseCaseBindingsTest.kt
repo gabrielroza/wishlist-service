@@ -31,5 +31,4 @@ class UseCaseBindingsTest {
         assertTrue(this::getProducts.isInitialized)
         assertTrue(this::hasProduct.isInitialized)
     }
-
 }

@@ -20,11 +20,10 @@ class WishlistTest {
     @Test
     fun `Should allow up to 20 products`() {
         assertDoesNotThrow {
-            val products =(0..19).map(Int::toString).toSet()
+            val products = (0..19).map(Int::toString).toSet()
             val wishlist = Wishlist("customer", products)
             assertEquals(products, wishlist.productIds)
             assertEquals("customer", wishlist.customerId)
         }
     }
-
 }

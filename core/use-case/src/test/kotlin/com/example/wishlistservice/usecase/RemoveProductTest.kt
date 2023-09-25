@@ -29,8 +29,8 @@ class RemoveProductTest {
     fun `Should throw exception when product is not on wishlist`() {
         val customer = "Customer"
         every { wishlistRepository.findByCustomerId(customer) } returns Wishlist(
-            customerId = customer, productIds =
-            setOf("Product")
+            customerId = customer,
+            productIds = setOf("Product")
         )
         val product = "Product 2"
         assertThrows<WishlistProductNotFoundException> {
@@ -48,5 +48,4 @@ class RemoveProductTest {
         RemoveProduct(wishlistRepository).removeProductFromCustomerWishlist(customer, productToRemove)
         verify { wishlistRepository.save(expectedWishlist) }
     }
-
 }
