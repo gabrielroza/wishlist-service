@@ -18,8 +18,9 @@ Aplicação implementada em Kotlin e Spring Boot, organizada pelos seguintes mó
 ## Instruções de execução
 
 - Baixar este repositório
-- Executar `docker-compose up` para subir o MongoDB utilizado pela aplicação
-- Executar ./gradlew :spring-app:bootRun
+- Executar `docker-compose up --detach` para subir o MongoDB utilizado pela aplicação
+- Executar `./gradlew :spring-app:bootRun`
+![run](/imgs/run.gif)
 - Swagger disponível em http://localhost:8080/swagger-ui/index.html  
 ![screenshot](/imgs/swagger.png)
 
